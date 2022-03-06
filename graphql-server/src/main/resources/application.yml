@@ -1,0 +1,7 @@
+server.port: 8081
+movieurl: http://localhost:8082/movies
+theatreurl: http://localhost:8083/theatres
+showurl: http://localhost:8084/shows
+
+spring:
+  application.name: graphql-server

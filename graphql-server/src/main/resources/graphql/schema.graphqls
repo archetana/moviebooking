@@ -1,0 +1,36 @@
+type Mutation {
+  addUpdateShow(theatreId: Int!, movieId: Int, dateTime: String!, numSeats: Int!): Show!
+  deleteShow(showId: Int!): Show
+}
+ 
+type Query {
+    movies : [Movie]
+    theatres : [Theatre]
+    shows: [Show]
+    moviesById(id: ID): Movie
+    theatresById(id: ID): Theatre
+    showsById(id: ID): Show
+    showsByTheatre(theatreId: ID): [Show]
+}
+
+type Movie {
+    id: ID
+    name: String
+}
+
+type Theatre {
+    id: ID
+    name: String
+    pincode: String 
+}
+
+type Show {
+    id: ID
+    theatreId: Int
+    theatre: Theatre
+    movieId: Int
+    movie: Movie
+    dateTime: String
+    numSeats: Int
+}
+
